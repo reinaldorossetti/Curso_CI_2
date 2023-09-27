@@ -1,0 +1,15 @@
+name: Docker
+
+on:
+  workflow_call:
+
+jobs:
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Docker Login
+        uses: docker/login-action@v2.0.0
+        with:
+            username: reinaldorossetti
+            password: ${{ secrets.PASSWORD_DOCKER_HUB }}
